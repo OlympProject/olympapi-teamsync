@@ -907,8 +907,35 @@
         "chainingRules": [],
         "responseTests": []
       }
+    },
+    {
+      "type": "request",
+      "id": "1779376531145664",
+      "name": "bearer",
+      "request": {
+        "id": "httpreq_1",
+        "name": "Protected by Bearer token",
+        "method": "GET",
+        "url": "http://localhost:3000/auth/bearer",
+        "headers": [],
+        "queryParams": [],
+        "bodyType": "none",
+        "body": "",
+        "rawSubType": "JSON",
+        "formFields": [],
+        "graphqlVariables": "",
+        "auth": {
+          "type": "bearer",
+          "value": "Test",
+          "apiKeyInQuery": false
+        },
+        "preRequestScript": "",
+        "postResponseScript": "",
+        "chainingRules": [],
+        "responseTests": []
+      }
     }
   ],
   "createdAt": "2026-05-20T20:51:19.176048Z",
-  "updatedAt": "2026-05-20T20:55:50.735455Z"
+  "updatedAt": "2026-05-21T15:15:31.145664Z"
 }
