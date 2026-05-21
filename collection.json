@@ -1,0 +1,914 @@
+{
+  "id": "1779310279176048",
+  "name": "OlympAPI Test Server",
+  "items": [
+    {
+      "type": "folder",
+      "id": "folder_2_auth",
+      "name": "auth",
+      "items": [
+        {
+          "type": "request",
+          "id": "req_0",
+          "name": "Protected by Bearer token",
+          "request": {
+            "id": "httpreq_1",
+            "name": "Protected by Bearer token",
+            "method": "GET",
+            "url": "http://localhost:3000/auth/bearer",
+            "headers": [],
+            "queryParams": [],
+            "bodyType": "none",
+            "body": "",
+            "rawSubType": "JSON",
+            "formFields": [],
+            "graphqlVariables": "",
+            "auth": {
+              "type": "none",
+              "value": "",
+              "apiKeyInQuery": false
+            },
+            "preRequestScript": "",
+            "postResponseScript": "",
+            "chainingRules": [],
+            "responseTests": []
+          }
+        },
+        {
+          "type": "request",
+          "id": "req_3",
+          "name": "Protected by HTTP Basic auth (admin:password123)",
+          "request": {
+            "id": "httpreq_4",
+            "name": "Protected by HTTP Basic auth (admin:password123)",
+            "method": "GET",
+            "url": "http://localhost:3000/auth/basic",
+            "headers": [],
+            "queryParams": [],
+            "bodyType": "none",
+            "body": "",
+            "rawSubType": "JSON",
+            "formFields": [],
+            "graphqlVariables": "",
+            "auth": {
+              "type": "none",
+              "value": "",
+              "apiKeyInQuery": false
+            },
+            "preRequestScript": "",
+            "postResponseScript": "",
+            "chainingRules": [],
+            "responseTests": []
+          }
+        },
+        {
+          "type": "request",
+          "id": "req_5",
+          "name": "Protected by API key (header or query param)",
+          "request": {
+            "id": "httpreq_6",
+            "name": "Protected by API key (header or query param)",
+            "method": "GET",
+            "url": "http://localhost:3000/auth/apikey",
+            "headers": [
+              {
+                "name": "X-API-Key",
+                "value": "",
+                "enabled": true
+              }
+            ],
+            "queryParams": [
+              {
+                "name": "api_key",
+                "value": "",
+                "enabled": true
+              }
+            ],
+            "bodyType": "none",
+            "body": "",
+            "rawSubType": "JSON",
+            "formFields": [],
+            "graphqlVariables": "",
+            "auth": {
+              "type": "none",
+              "value": "",
+              "apiKeyInQuery": false
+            },
+            "preRequestScript": "",
+            "postResponseScript": "",
+            "chainingRules": [],
+            "responseTests": []
+          }
+        },
+        {
+          "type": "request",
+          "id": "req_7",
+          "name": "Login with username and password",
+          "request": {
+            "id": "httpreq_8",
+            "name": "Login with username and password",
+            "method": "POST",
+            "url": "http://localhost:3000/auth/login",
+            "headers": [],
+            "queryParams": [],
+            "bodyType": "json",
+            "body": "",
+            "rawSubType": "JSON",
+            "formFields": [],
+            "graphqlVariables": "",
+            "auth": {
+              "type": "none",
+              "value": "",
+              "apiKeyInQuery": false
+            },
+            "preRequestScript": "",
+            "postResponseScript": "",
+            "chainingRules": [],
+            "responseTests": []
+          }
+        },
+        {
+          "type": "request",
+          "id": "req_9",
+          "name": "Get current user profile (requires login token)",
+          "request": {
+            "id": "httpreq_10",
+            "name": "Get current user profile (requires login token)",
+            "method": "GET",
+            "url": "http://localhost:3000/auth/me",
+            "headers": [],
+            "queryParams": [],
+            "bodyType": "none",
+            "body": "",
+            "rawSubType": "JSON",
+            "formFields": [],
+            "graphqlVariables": "",
+            "auth": {
+              "type": "none",
+              "value": "",
+              "apiKeyInQuery": false
+            },
+            "preRequestScript": "",
+            "postResponseScript": "",
+            "chainingRules": [],
+            "responseTests": []
+          }
+        }
+      ]
+    },
+    {
+      "type": "folder",
+      "id": "folder_13_body",
+      "name": "body",
+      "items": [
+        {
+          "type": "request",
+          "id": "req_11",
+          "name": "Parse and echo a JSON body",
+          "request": {
+            "id": "httpreq_12",
+            "name": "Parse and echo a JSON body",
+            "method": "POST",
+            "url": "http://localhost:3000/body/json",
+            "headers": [],
+            "queryParams": [],
+            "bodyType": "json",
+            "body": "",
+            "rawSubType": "JSON",
+            "formFields": [],
+            "graphqlVariables": "",
+            "auth": {
+              "type": "none",
+              "value": "",
+              "apiKeyInQuery": false
+            },
+            "preRequestScript": "",
+            "postResponseScript": "",
+            "chainingRules": [],
+            "responseTests": []
+          }
+        },
+        {
+          "type": "request",
+          "id": "req_14",
+          "name": "Parse and echo a URL-encoded form body",
+          "request": {
+            "id": "httpreq_15",
+            "name": "Parse and echo a URL-encoded form body",
+            "method": "POST",
+            "url": "http://localhost:3000/body/form",
+            "headers": [],
+            "queryParams": [],
+            "bodyType": "json",
+            "body": "",
+            "rawSubType": "JSON",
+            "formFields": [],
+            "graphqlVariables": "",
+            "auth": {
+              "type": "none",
+              "value": "",
+              "apiKeyInQuery": false
+            },
+            "preRequestScript": "",
+            "postResponseScript": "",
+            "chainingRules": [],
+            "responseTests": []
+          }
+        },
+        {
+          "type": "request",
+          "id": "req_16",
+          "name": "Validate required fields name and email",
+          "request": {
+            "id": "httpreq_17",
+            "name": "Validate required fields name and email",
+            "method": "POST",
+            "url": "http://localhost:3000/body/validate",
+            "headers": [],
+            "queryParams": [],
+            "bodyType": "json",
+            "body": "",
+            "rawSubType": "JSON",
+            "formFields": [],
+            "graphqlVariables": "",
+            "auth": {
+              "type": "none",
+              "value": "",
+              "apiKeyInQuery": false
+            },
+            "preRequestScript": "",
+            "postResponseScript": "",
+            "chainingRules": [],
+            "responseTests": []
+          }
+        },
+        {
+          "type": "request",
+          "id": "req_18",
+          "name": "Accept multipart/form-data (text fields + file uploads)",
+          "request": {
+            "id": "httpreq_19",
+            "name": "Accept multipart/form-data (text fields + file uploads)",
+            "method": "POST",
+            "url": "http://localhost:3000/body/multipart",
+            "headers": [],
+            "queryParams": [],
+            "bodyType": "json",
+            "body": "",
+            "rawSubType": "JSON",
+            "formFields": [],
+            "graphqlVariables": "",
+            "auth": {
+              "type": "none",
+              "value": "",
+              "apiKeyInQuery": false
+            },
+            "preRequestScript": "",
+            "postResponseScript": "",
+            "chainingRules": [],
+            "responseTests": []
+          }
+        },
+        {
+          "type": "request",
+          "id": "req_20",
+          "name": "Accept a raw binary body (any content type, max 10 MB)",
+          "request": {
+            "id": "httpreq_21",
+            "name": "Accept a raw binary body (any content type, max 10 MB)",
+            "method": "POST",
+            "url": "http://localhost:3000/body/binary",
+            "headers": [],
+            "queryParams": [],
+            "bodyType": "json",
+            "body": "",
+            "rawSubType": "JSON",
+            "formFields": [],
+            "graphqlVariables": "",
+            "auth": {
+              "type": "none",
+              "value": "",
+              "apiKeyInQuery": false
+            },
+            "preRequestScript": "",
+            "postResponseScript": "",
+            "chainingRules": [],
+            "responseTests": []
+          }
+        }
+      ]
+    },
+    {
+      "type": "folder",
+      "id": "folder_24_other",
+      "name": "other",
+      "items": [
+        {
+          "type": "request",
+          "id": "req_22",
+          "name": "Mock GraphQL endpoint — echoes query and variables",
+          "request": {
+            "id": "httpreq_23",
+            "name": "Mock GraphQL endpoint — echoes query and variables",
+            "method": "POST",
+            "url": "http://localhost:3000/graphql",
+            "headers": [],
+            "queryParams": [],
+            "bodyType": "json",
+            "body": "",
+            "rawSubType": "JSON",
+            "formFields": [],
+            "graphqlVariables": "",
+            "auth": {
+              "type": "none",
+              "value": "",
+              "apiKeyInQuery": false
+            },
+            "preRequestScript": "",
+            "postResponseScript": "",
+            "chainingRules": [],
+            "responseTests": []
+          }
+        },
+        {
+          "type": "request",
+          "id": "req_30",
+          "name": "Get user by ID (chaining target — requires Bearer token from /auth/login)",
+          "request": {
+            "id": "httpreq_31",
+            "name": "Get user by ID (chaining target — requires Bearer token from /auth/login)",
+            "method": "GET",
+            "url": "http://localhost:3000/users/{id}",
+            "headers": [],
+            "queryParams": [],
+            "bodyType": "none",
+            "body": "",
+            "rawSubType": "JSON",
+            "formFields": [],
+            "graphqlVariables": "",
+            "auth": {
+              "type": "none",
+              "value": "",
+              "apiKeyInQuery": false
+            },
+            "preRequestScript": "",
+            "postResponseScript": "",
+            "chainingRules": [],
+            "responseTests": []
+          }
+        },
+        {
+          "type": "request",
+          "id": "req_50",
+          "name": "Echo all request headers",
+          "request": {
+            "id": "httpreq_51",
+            "name": "Echo all request headers",
+            "method": "GET",
+            "url": "http://localhost:3000/headers",
+            "headers": [],
+            "queryParams": [],
+            "bodyType": "none",
+            "body": "",
+            "rawSubType": "JSON",
+            "formFields": [],
+            "graphqlVariables": "",
+            "auth": {
+              "type": "none",
+              "value": "",
+              "apiKeyInQuery": false
+            },
+            "preRequestScript": "",
+            "postResponseScript": "",
+            "chainingRules": [],
+            "responseTests": []
+          }
+        },
+        {
+          "type": "request",
+          "id": "req_55",
+          "name": "Echo query parameters",
+          "request": {
+            "id": "httpreq_56",
+            "name": "Echo query parameters",
+            "method": "GET",
+            "url": "http://localhost:3000/params",
+            "headers": [],
+            "queryParams": [
+              {
+                "name": "name",
+                "value": "",
+                "enabled": true
+              },
+              {
+                "name": "page",
+                "value": "",
+                "enabled": true
+              }
+            ],
+            "bodyType": "none",
+            "body": "",
+            "rawSubType": "JSON",
+            "formFields": [],
+            "graphqlVariables": "",
+            "auth": {
+              "type": "none",
+              "value": "",
+              "apiKeyInQuery": false
+            },
+            "preRequestScript": "",
+            "postResponseScript": "",
+            "chainingRules": [],
+            "responseTests": []
+          }
+        },
+        {
+          "type": "request",
+          "id": "req_60",
+          "name": "Health check",
+          "request": {
+            "id": "httpreq_61",
+            "name": "Health check",
+            "method": "GET",
+            "url": "http://localhost:3000/health",
+            "headers": [],
+            "queryParams": [],
+            "bodyType": "none",
+            "body": "",
+            "rawSubType": "JSON",
+            "formFields": [],
+            "graphqlVariables": "",
+            "auth": {
+              "type": "none",
+              "value": "",
+              "apiKeyInQuery": false
+            },
+            "preRequestScript": "",
+            "postResponseScript": "",
+            "chainingRules": [],
+            "responseTests": []
+          }
+        },
+        {
+          "type": "request",
+          "id": "req_62",
+          "name": "Respond with the given HTTP status code",
+          "request": {
+            "id": "httpreq_63",
+            "name": "Respond with the given HTTP status code",
+            "method": "GET",
+            "url": "http://localhost:3000/status/{code}",
+            "headers": [],
+            "queryParams": [],
+            "bodyType": "none",
+            "body": "",
+            "rawSubType": "JSON",
+            "formFields": [],
+            "graphqlVariables": "",
+            "auth": {
+              "type": "none",
+              "value": "",
+              "apiKeyInQuery": false
+            },
+            "preRequestScript": "",
+            "postResponseScript": "",
+            "chainingRules": [],
+            "responseTests": []
+          }
+        },
+        {
+          "type": "request",
+          "id": "req_64",
+          "name": "Respond after a delay",
+          "request": {
+            "id": "httpreq_65",
+            "name": "Respond after a delay",
+            "method": "GET",
+            "url": "http://localhost:3000/delay/{ms}",
+            "headers": [],
+            "queryParams": [],
+            "bodyType": "none",
+            "body": "",
+            "rawSubType": "JSON",
+            "formFields": [],
+            "graphqlVariables": "",
+            "auth": {
+              "type": "none",
+              "value": "",
+              "apiKeyInQuery": false
+            },
+            "preRequestScript": "",
+            "postResponseScript": "",
+            "chainingRules": [],
+            "responseTests": []
+          }
+        }
+      ]
+    },
+    {
+      "type": "folder",
+      "id": "folder_27_data",
+      "name": "data",
+      "items": [
+        {
+          "type": "request",
+          "id": "req_25",
+          "name": "Get a fixed list of 5 users (deterministic for response-test assertions)",
+          "request": {
+            "id": "httpreq_26",
+            "name": "Get a fixed list of 5 users (deterministic for response-test assertions)",
+            "method": "GET",
+            "url": "http://localhost:3000/data/users",
+            "headers": [],
+            "queryParams": [],
+            "bodyType": "none",
+            "body": "",
+            "rawSubType": "JSON",
+            "formFields": [],
+            "graphqlVariables": "",
+            "auth": {
+              "type": "none",
+              "value": "",
+              "apiKeyInQuery": false
+            },
+            "preRequestScript": "",
+            "postResponseScript": "",
+            "chainingRules": [],
+            "responseTests": []
+          }
+        },
+        {
+          "type": "request",
+          "id": "req_28",
+          "name": "Get a single user by ID",
+          "request": {
+            "id": "httpreq_29",
+            "name": "Get a single user by ID",
+            "method": "GET",
+            "url": "http://localhost:3000/data/user/{id}",
+            "headers": [],
+            "queryParams": [],
+            "bodyType": "none",
+            "body": "",
+            "rawSubType": "JSON",
+            "formFields": [],
+            "graphqlVariables": "",
+            "auth": {
+              "type": "none",
+              "value": "",
+              "apiKeyInQuery": false
+            },
+            "preRequestScript": "",
+            "postResponseScript": "",
+            "chainingRules": [],
+            "responseTests": []
+          }
+        }
+      ]
+    },
+    {
+      "type": "folder",
+      "id": "folder_34_debug",
+      "name": "debug",
+      "items": [
+        {
+          "type": "request",
+          "id": "req_32",
+          "name": "Full debug echo — method, headers, query, body, ip",
+          "request": {
+            "id": "httpreq_33",
+            "name": "Full debug echo — method, headers, query, body, ip",
+            "method": "GET",
+            "url": "http://localhost:3000/debug/echo",
+            "headers": [],
+            "queryParams": [],
+            "bodyType": "none",
+            "body": "",
+            "rawSubType": "JSON",
+            "formFields": [],
+            "graphqlVariables": "",
+            "auth": {
+              "type": "none",
+              "value": "",
+              "apiKeyInQuery": false
+            },
+            "preRequestScript": "",
+            "postResponseScript": "",
+            "chainingRules": [],
+            "responseTests": []
+          }
+        }
+      ]
+    },
+    {
+      "type": "folder",
+      "id": "folder_37_echo",
+      "name": "echo",
+      "items": [
+        {
+          "type": "request",
+          "id": "req_35",
+          "name": "Echo GET request details",
+          "request": {
+            "id": "httpreq_36",
+            "name": "Echo GET request details",
+            "method": "GET",
+            "url": "http://localhost:3000/echo",
+            "headers": [],
+            "queryParams": [],
+            "bodyType": "none",
+            "body": "",
+            "rawSubType": "JSON",
+            "formFields": [],
+            "graphqlVariables": "",
+            "auth": {
+              "type": "none",
+              "value": "",
+              "apiKeyInQuery": false
+            },
+            "preRequestScript": "",
+            "postResponseScript": "",
+            "chainingRules": [],
+            "responseTests": []
+          }
+        },
+        {
+          "type": "request",
+          "id": "req_38",
+          "name": "Echo POST request details",
+          "request": {
+            "id": "httpreq_39",
+            "name": "Echo POST request details",
+            "method": "POST",
+            "url": "http://localhost:3000/echo",
+            "headers": [],
+            "queryParams": [],
+            "bodyType": "json",
+            "body": "",
+            "rawSubType": "JSON",
+            "formFields": [],
+            "graphqlVariables": "",
+            "auth": {
+              "type": "none",
+              "value": "",
+              "apiKeyInQuery": false
+            },
+            "preRequestScript": "",
+            "postResponseScript": "",
+            "chainingRules": [],
+            "responseTests": []
+          }
+        },
+        {
+          "type": "request",
+          "id": "req_40",
+          "name": "Echo PUT request details",
+          "request": {
+            "id": "httpreq_41",
+            "name": "Echo PUT request details",
+            "method": "PUT",
+            "url": "http://localhost:3000/echo",
+            "headers": [],
+            "queryParams": [],
+            "bodyType": "none",
+            "body": "",
+            "rawSubType": "JSON",
+            "formFields": [],
+            "graphqlVariables": "",
+            "auth": {
+              "type": "none",
+              "value": "",
+              "apiKeyInQuery": false
+            },
+            "preRequestScript": "",
+            "postResponseScript": "",
+            "chainingRules": [],
+            "responseTests": []
+          }
+        },
+        {
+          "type": "request",
+          "id": "req_42",
+          "name": "Echo PATCH request details",
+          "request": {
+            "id": "httpreq_43",
+            "name": "Echo PATCH request details",
+            "method": "PATCH",
+            "url": "http://localhost:3000/echo",
+            "headers": [],
+            "queryParams": [],
+            "bodyType": "none",
+            "body": "",
+            "rawSubType": "JSON",
+            "formFields": [],
+            "graphqlVariables": "",
+            "auth": {
+              "type": "none",
+              "value": "",
+              "apiKeyInQuery": false
+            },
+            "preRequestScript": "",
+            "postResponseScript": "",
+            "chainingRules": [],
+            "responseTests": []
+          }
+        },
+        {
+          "type": "request",
+          "id": "req_44",
+          "name": "Echo DELETE request details",
+          "request": {
+            "id": "httpreq_45",
+            "name": "Echo DELETE request details",
+            "method": "DELETE",
+            "url": "http://localhost:3000/echo",
+            "headers": [],
+            "queryParams": [],
+            "bodyType": "none",
+            "body": "",
+            "rawSubType": "JSON",
+            "formFields": [],
+            "graphqlVariables": "",
+            "auth": {
+              "type": "none",
+              "value": "",
+              "apiKeyInQuery": false
+            },
+            "preRequestScript": "",
+            "postResponseScript": "",
+            "chainingRules": [],
+            "responseTests": []
+          }
+        },
+        {
+          "type": "request",
+          "id": "req_46",
+          "name": "Echo HEAD request (headers only, no body)",
+          "request": {
+            "id": "httpreq_47",
+            "name": "Echo HEAD request (headers only, no body)",
+            "method": "HEAD",
+            "url": "http://localhost:3000/echo",
+            "headers": [],
+            "queryParams": [],
+            "bodyType": "none",
+            "body": "",
+            "rawSubType": "JSON",
+            "formFields": [],
+            "graphqlVariables": "",
+            "auth": {
+              "type": "none",
+              "value": "",
+              "apiKeyInQuery": false
+            },
+            "preRequestScript": "",
+            "postResponseScript": "",
+            "chainingRules": [],
+            "responseTests": []
+          }
+        },
+        {
+          "type": "request",
+          "id": "req_48",
+          "name": "CORS preflight / OPTIONS echo",
+          "request": {
+            "id": "httpreq_49",
+            "name": "CORS preflight / OPTIONS echo",
+            "method": "OPTIONS",
+            "url": "http://localhost:3000/echo",
+            "headers": [],
+            "queryParams": [],
+            "bodyType": "none",
+            "body": "",
+            "rawSubType": "JSON",
+            "formFields": [],
+            "graphqlVariables": "",
+            "auth": {
+              "type": "none",
+              "value": "",
+              "apiKeyInQuery": false
+            },
+            "preRequestScript": "",
+            "postResponseScript": "",
+            "chainingRules": [],
+            "responseTests": []
+          }
+        }
+      ]
+    },
+    {
+      "type": "folder",
+      "id": "folder_54_headers",
+      "name": "headers",
+      "items": [
+        {
+          "type": "request",
+          "id": "req_52",
+          "name": "Require X-Custom-Header header",
+          "request": {
+            "id": "httpreq_53",
+            "name": "Require X-Custom-Header header",
+            "method": "GET",
+            "url": "http://localhost:3000/headers/required",
+            "headers": [
+              {
+                "name": "X-Custom-Header",
+                "value": "",
+                "enabled": true
+              }
+            ],
+            "queryParams": [],
+            "bodyType": "none",
+            "body": "",
+            "rawSubType": "JSON",
+            "formFields": [],
+            "graphqlVariables": "",
+            "auth": {
+              "type": "none",
+              "value": "",
+              "apiKeyInQuery": false
+            },
+            "preRequestScript": "",
+            "postResponseScript": "",
+            "chainingRules": [],
+            "responseTests": []
+          }
+        }
+      ]
+    },
+    {
+      "type": "folder",
+      "id": "folder_59_params",
+      "name": "params",
+      "items": [
+        {
+          "type": "request",
+          "id": "req_57",
+          "name": "Require name and page query parameters",
+          "request": {
+            "id": "httpreq_58",
+            "name": "Require name and page query parameters",
+            "method": "GET",
+            "url": "http://localhost:3000/params/required",
+            "headers": [],
+            "queryParams": [
+              {
+                "name": "name",
+                "value": "",
+                "enabled": true
+              },
+              {
+                "name": "page",
+                "value": "",
+                "enabled": true
+              }
+            ],
+            "bodyType": "none",
+            "body": "",
+            "rawSubType": "JSON",
+            "formFields": [],
+            "graphqlVariables": "",
+            "auth": {
+              "type": "none",
+              "value": "",
+              "apiKeyInQuery": false
+            },
+            "preRequestScript": "",
+            "postResponseScript": "",
+            "chainingRules": [],
+            "responseTests": []
+          }
+        }
+      ]
+    },
+    {
+      "type": "request",
+      "id": "req_3_dedup0",
+      "name": "Protected by HTTP Basic auth (admin:password123)",
+      "request": {
+        "id": "httpreq_4",
+        "name": "Protected by HTTP Basic auth (admin:password123)",
+        "method": "GET",
+        "url": "http://localhost:3000/auth/basic",
+        "headers": [],
+        "queryParams": [],
+        "bodyType": "none",
+        "body": "",
+        "rawSubType": "JSON",
+        "formFields": [],
+        "graphqlVariables": "",
+        "auth": {
+          "type": "none",
+          "value": "",
+          "apiKeyInQuery": false
+        },
+        "preRequestScript": "",
+        "postResponseScript": "",
+        "chainingRules": [],
+        "responseTests": []
+      }
+    }
+  ],
+  "createdAt": "2026-05-20T20:51:19.176048Z",
+  "updatedAt": "2026-05-20T20:55:50.735455Z"
+}
