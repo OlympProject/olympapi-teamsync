@@ -1,0 +1,32 @@
+{
+  "id": "1779258895788336",
+  "name": "Localhost",
+  "variables": [
+    {
+      "name": "BASE_URL",
+      "value": "http://localhost:3000",
+      "sensitive": false,
+      "enabled": true
+    },
+    {
+      "name": "DYNAMIC_KEY",
+      "value": "script-value-123",
+      "sensitive": false,
+      "enabled": true
+    },
+    {
+      "name": "JWT_TOKEN",
+      "value": "jwt-abc-xyz-123",
+      "sensitive": false,
+      "enabled": true
+    },
+    {
+      "name": "USER_ID",
+      "value": "user-42",
+      "sensitive": false,
+      "enabled": true
+    }
+  ],
+  "createdAt": "2026-05-20T06:34:55.788336Z",
+  "updatedAt": "2026-05-20T14:11:52.652523Z"
+}
